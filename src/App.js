@@ -1,7 +1,7 @@
 // import logo from './logo.svg';
 import './App.css';
 import { Component } from 'react';
-
+import CardsList from './components/card-list/cardList.component.jsx';
 class App extends Component {
   constructor() {
     super();
@@ -23,21 +23,16 @@ class App extends Component {
   }
 
   render() {
+    console.log('render app')
+    const {monsters,search} = this.state
     return (
       
       <div className="App">
         <input className='search-box' type='search' placeholder='search monsters' onChange={(e) =>{
           this.setState({search:e.target.value})
         }} />
-        {
-          this.state.monsters.map((monster) => {
-            
-            if(monster.name.toLowerCase().includes(this.state.search.toLowerCase())){
-              return <h1 key={monster.id} >{monster.name}</h1>
-            }
-            return ''
-          })
-        }
+        
+        <CardsList monsters={monsters} search={search} />
       </div>
     )
   }
