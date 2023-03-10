@@ -12,7 +12,7 @@ class CardsList extends Component{
                     monsters.map((monster) => {
             
                         if(monster.name.toLowerCase().includes(search.toLowerCase())){
-                            return <h1 key={monster.id} >{monster.name}</h1>
+                            return <h1 key={monster.key}>{monster.name} </h1>
                         }
                         return ''
                     })
