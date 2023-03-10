@@ -1,4 +1,7 @@
 import {Component} from 'react'
+import './cardList.style.css'
+
+import Cards from '../card/card.component.jsx'
 
 class CardsList extends Component{
     
@@ -7,12 +10,12 @@ class CardsList extends Component{
         console.log('render cards')
         const {monsters,search}=this.props
         return (
-            <div>
+            <div className='card-list'>
                 {
                     monsters.map((monster) => {
             
                         if(monster.name.toLowerCase().includes(search.toLowerCase())){
-                            return <h1 key={monster.key}>{monster.name} </h1>
+                            return <Cards monster={monster} />
                         }
                         return ''
                     })
