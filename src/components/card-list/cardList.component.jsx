@@ -1,10 +1,7 @@
 import {Component} from 'react'
 
 class CardsList extends Component{
-    constructor(){
-        super();
-
-    }
+    
 
     render(){
         console.log('render cards')
