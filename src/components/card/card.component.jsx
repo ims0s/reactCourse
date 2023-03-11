@@ -1,5 +1,6 @@
 import { Component } from "react";
 import './card.style.css'
+import Button from 'react-bootstrap/Button'
 
 class Cards extends Component{
 
@@ -7,9 +8,12 @@ class Cards extends Component{
         const {id,name,email}=this.props.monster
         return (
             <div className='card-container'>
-                <img src={`https://robohash.org/${id}}?set=set2`} alt={`monster ${name} `} key={id} />
-                <h2>{name}</h2>
+                <img src={`https://robohash.org/${id}}?set=set2&size=150x150`} alt={`monster ${name} `} key={id} />
+                <h2 className="h2">{name}</h2>
                 <p>{email}</p>
+                <Button variant='danger'>
+                    hello
+                </Button>
             </div>
     )}
 }

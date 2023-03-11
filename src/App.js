@@ -1,4 +1,4 @@
-// import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
 import { Component } from 'react';
 import CardsList from './components/card-list/cardList.component.jsx';
@@ -28,12 +28,12 @@ class App extends Component {
   }
 
   render() {
-    console.log('render app')
+    
     const {monsters,search} = this.state
     return (
       
       <div className="App">
-        <SearchBox className='search-box' placeholder="monsters name" onChangeHandler={this.onSearchChange} />
+        <SearchBox className='' placeholder="monsters name" onChangeHandler={this.onSearchChange} />
         
         <CardsList monsters={monsters} search={search} />
       </div>
